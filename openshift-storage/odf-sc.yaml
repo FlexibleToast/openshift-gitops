@@ -21,8 +21,7 @@ spec:
   nfs:
     enable: false
   storageDeviceSets:
-  - config: {}
-    count: 7
+  - count: 7
     dataPVCTemplate:
       metadata: {}
       spec:
@@ -33,9 +32,5 @@ spec:
             storage: "1"
         storageClassName: local-ssd
         volumeMode: Block
-      status: {}
     name: ocs-deviceset-local-ssd
-    placement: {}
-    preparePlacement: {}
     replica: 3
-    resources: {}
