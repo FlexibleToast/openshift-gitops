@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  name: openshift-local-storage
+  namespace: openshift-local-storage
+spec:
+  targetNamespaces:
+  - openshift-local-storage
+  upgradeStrategy: Default
