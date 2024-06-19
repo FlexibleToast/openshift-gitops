@@ -3,11 +3,11 @@ kind: Subscription
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
-  name: ocs-operator
+  name: odf-operator
   namespace: openshift-storage
 spec:
   channel: stable-4.15
   installPlanApproval: Automatic
-  name: ocs-operator
+  name: odf-operator
   source: redhat-operators 
   sourceNamespace: openshift-marketplace

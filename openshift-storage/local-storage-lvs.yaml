@@ -9,7 +9,7 @@ metadata:
 spec:
   deviceInclusionSpec:
     deviceMechanicalProperties:
-    - nonRotational
+    - NonRotational
     deviceTypes:
     - disk
     - part
