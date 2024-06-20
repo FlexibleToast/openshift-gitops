@@ -13,3 +13,4 @@ oc create -n openshift-logging secret generic lokistack-dev-odf \
   --from-literal=access_key_secret="${SECRET_ACCESS_KEY}" \
   --from-literal=bucketnames="${BUCKET_NAME}" \
   --from-literal=endpoint="https://${BUCKET_HOST}:${BUCKET_PORT}"
+oc -n openshift-logging create cm self-signed-ca --from-literal=service-ca.crt="$(oc -n openshift-ingress extract secret/router-certs-default --keys=tls.crt --to=-)"

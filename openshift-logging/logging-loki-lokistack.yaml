@@ -7,13 +7,13 @@ metadata:
   name: logging-loki
   namespace: openshift-logging
 spec:
-  size: 1x.small
+  size: 1x.extra-small
   storageClassName: ocs-storagecluster-ceph-rbd
   storage:
     secret:
       name: lokistack-dev-odf
       type: s3
     tls:
-      caName: openshift-service-ca.crt
+      caName: self-signed-ca
   tenants:
     mode: openshift-logging
