@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
   name: lokistack-sub
-  namespace: openshift-logging 
+  namespace: openshift-operators-redhat
 spec:
   channel: stable-5.9
   name: lokie-operator
