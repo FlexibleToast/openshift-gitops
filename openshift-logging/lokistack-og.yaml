@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
   name: lokistack-og
-  namespace: openshift-operators-redhat
+  namespace: openshift-operators
 spec:
   targetNamespaces:
-  - openshift-operators-redhat
+  - openshift-operators
