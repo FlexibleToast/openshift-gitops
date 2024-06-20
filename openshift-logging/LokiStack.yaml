@@ -8,7 +8,7 @@ metadata:
   namespace: openshift-logging
 spec:
   size: 1x.small
-  storageClassName: ocs-storagecluster-rbd
+  storageClassName: ocs-storagecluster-cephfs
   storage:
     secret:
       name: lokistack-dev-odf
