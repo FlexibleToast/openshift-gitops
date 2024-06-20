@@ -1,0 +1,19 @@
+apiVersion: loki.grafana.com/v1
+kind: LokiStack
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+  name: logging-loki
+  namespace: openshift-logging
+spec:
+  size: 1x.small
+  storageClassName: ocs-storagecluster-ceph-rbd
+  storage:
+    secret:
+      name: lokistack-dev-odf
+      type: s3
+    tls:
+      caName: openshift-service-ca.crt
+  tenants:
+    mode: openshift-logging
